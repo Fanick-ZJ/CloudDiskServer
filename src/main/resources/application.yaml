@@ -1,0 +1,24 @@
+# 配置spring自带的数据源
+spring:
+  datasource:
+    username: root
+    password: zj11246733@
+    url:  jdbc:mysql://localhost:3306/cloudserverdb?userSSL=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: cloudDiskServer
+#整合mybatis
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+# 服务端端口
+server:
+  port: 8081
+
+#oss配置
+aliyun:
+  endpoint:
+  accessKeyId:
+  accessKeySecret:
+  bucketName:
