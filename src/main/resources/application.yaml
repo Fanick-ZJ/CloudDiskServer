@@ -19,6 +19,6 @@ server:
 #oss配置
 aliyun:
   endpoint: oss-cn-beijing.aliyuncs.com
-  accessKeyId: 
-  accessKeySecret: 
-  bucketName: 
+  accessKeyId: LTAI5tK2qLBVk2ooX3gfEtkX
+  accessKeySecret:
+  bucketName: test-api-createbucket

@@ -76,4 +76,16 @@ public class UserInfo {
     this.userCloudRootPath = userCloudRootPath;
   }
 
+  @Override
+  public String toString() {
+    return "UserInfo{" +
+            "id=" + id +
+            ", userNickname='" + userNickname + '\'' +
+            ", userAccount='" + userAccount + '\'' +
+            ", userPassword='" + userPassword + '\'' +
+            ", registerDate=" + registerDate +
+            ", userEmail='" + userEmail + '\'' +
+            ", userCloudRootPath='" + userCloudRootPath + '\'' +
+            '}';
+  }
 }

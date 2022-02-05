@@ -14,7 +14,7 @@
 </resultMap>
     <insert id="register" parameterType="com.fanick.clouddiskserver.entity.UserInfo">
         insert into cloudserverdb.user_info(id,user_nickname,user_account,user_password,register_date,user_email,user_cloud_root_path)
-            values(#{id},#{userNickname},#{userAccount},#{userPassword},#{registerDate},#{userEmail},#{userCloudRootPath})
+            values(#{id},#{userAccount},#{userAccount},#{userPassword},now(),#{userEmail},#{userCloudRootPath})
     </insert>
     <select id="loginByAccount" resultMap="UserInfo" parameterType="com.fanick.clouddiskserver.entity.UserInfo">
         select * from user_info
