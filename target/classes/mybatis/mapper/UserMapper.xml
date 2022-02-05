@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fanick.clouddiskserver.dao.UserMapper">
+<resultMap id="UserInfo" type="com.fanick.clouddiskserver.entity.UserInfo">
+    <id property="id" column="id"/>
+    <result property="userAccount" column="user_account"/>
+    <result property="userPassword" column="user_password"/>
+    <result property="userCloudRootPath" column="user_cloud_root_path"/>
+    <result property="userEmail" column="user_email"/>
+    <result property="registerDate" column="register_date"/>
+    <result property="userNickname" column="user_nickname"/>
+</resultMap>
+    <insert id="register" parameterType="com.fanick.clouddiskserver.entity.UserInfo">
+        insert into cloudserverdb.user_info(id,user_nickname,user_account,user_password,register_date,user_email,user_cloud_root_path)
+            values(#{id},#{userNickname},#{userAccount},#{userPassword},#{registerDate},#{userEmail},#{userCloudRootPath})
+    </insert>
+    <select id="loginByAccount" resultMap="UserInfo" parameterType="com.fanick.clouddiskserver.entity.UserInfo">
+        select * from user_info
+        where user_account = #{userAccount} and user_password = #{userPassword}
+    </select>
+    <select id="loginByEmail" resultMap="UserInfo" parameterType="com.fanick.clouddiskserver.entity.UserInfo">
+        select * from user_info
+        where user_email = #{userEmail} and user_password = #{userPassword}
+    </select>
+    <select id="getUseryEmail" resultMap="UserInfo">
+        select * from user_info
+        where user_email = #{userEmail}
+    </select>
+    <select id="getUserByAccount" resultMap="UserInfo">
+        select * from user_info
+        where user_account = #{userAccount}
+    </select>
+</mapper>

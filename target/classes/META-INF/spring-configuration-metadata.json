@@ -1,0 +1,37 @@
+{
+  "groups": [
+    {
+      "name": "aliyun",
+      "type": "com.fanick.clouddiskserver.config.OSSConfiguration",
+      "sourceType": "com.fanick.clouddiskserver.config.OSSConfiguration"
+    }
+  ],
+  "properties": [
+    {
+      "name": "aliyun.access-key-id",
+      "type": "java.lang.String",
+      "sourceType": "com.fanick.clouddiskserver.config.OSSConfiguration"
+    },
+    {
+      "name": "aliyun.access-key-secret",
+      "type": "java.lang.String",
+      "sourceType": "com.fanick.clouddiskserver.config.OSSConfiguration"
+    },
+    {
+      "name": "aliyun.bucket-name",
+      "type": "java.lang.String",
+      "sourceType": "com.fanick.clouddiskserver.config.OSSConfiguration"
+    },
+    {
+      "name": "aliyun.endpoint",
+      "type": "java.lang.String",
+      "sourceType": "com.fanick.clouddiskserver.config.OSSConfiguration"
+    },
+    {
+      "name": "aliyun.url-prefix",
+      "type": "java.lang.String",
+      "sourceType": "com.fanick.clouddiskserver.config.OSSConfiguration"
+    }
+  ],
+  "hints": []
+}
